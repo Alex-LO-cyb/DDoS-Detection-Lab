@@ -83,6 +83,7 @@ sudo docker-compose up -d
 # Shuffle > Apps > New App > Rechercher "Splunk"
 # Base URL : http://localhost:8088
 # Token : copier le token HEC créé
+![image](https://github.com/user-attachments/assets/ca6d8010-d0d3-42ad-add9-36de94f4385f)
 
 # === [9] CRÉATION DU PLAYBOOK SOAR (Détection DDoS) ===
 
