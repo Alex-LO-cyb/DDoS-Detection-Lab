@@ -86,9 +86,9 @@ By default, Suricata writes its JSON logs to this file: /var/log/suricata/eve.js
  -ls -l /var/log/suricata/eve.json
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/81e934ec-2817-47b3-9665-9f80d99db59c" alt="File exist" />
+  <img src="https://github.com/user-attachments/assets/81e934ec-2817-47b3-9665-9f80d99db59c" alt="Verify if eve.json exist" />
 </p>
-<p align="center"><b>Figure 4 : File exist</b></p>
+<p align="center"><b>Figure 4 : Verify if eve.json exist</b></p>
 
 
 - Edit the Suricata configuration file:
