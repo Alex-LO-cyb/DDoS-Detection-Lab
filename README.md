@@ -62,6 +62,7 @@ filename: /var/log/suricata/eve.json
 sudo apt install hping3 -y
 # Depuis une autre machine ou terminal, lancer :
 # sudo hping3 -S --flood -p 80 <IP_VM_avec_Suricata>
+![image](https://github.com/user-attachments/assets/b80e5fb9-45c1-48cb-a535-87acb17ea43c)
 
 # === [6] AJOUT DES LOGS IDS DANS SPLUNK ===
 sudo /opt/splunk/bin/splunk add monitor /var/log/suricata/eve.json -index ddos_logs -sourcetype suricata:json
@@ -87,27 +88,9 @@ sudo docker-compose up -d
 
 # === [9] CRÉATION DU PLAYBOOK SOAR (Détection DDoS) ===
 
-# Le playbook agit sur détection de l'événement DDoS et déclenche une alerte Splunk
-# YAML à importer dans Shuffle
+![image](https://github.com/user-attachments/assets/216fd7a2-4ba8-4c1d-8785-be9fc201ef54)
+![image](https://github.com/user-attachments/assets/7d17f8b8-f79f-416f-a86b-f6f4aadcfd20)
 
-name: Alerte_DDOS_IDS
-apps:
-  - name: splunk
-steps:
-  - name: Déclencheur_DDoS
-    app: builtin
-    type: eventlistener
-    trigger:
-      query: 'index="ddos_logs" sourcetype="suricata:json" "flow" AND "attack"'
-      interval: 30
-    next: Envoyer_Alerte
-  - name: Envoyer_Alerte
-    app: splunk
-    action: send_event
-    parameters:
-      index: "ddos_logs"
-      sourcetype: "soar_alert"
-      event: '"Alerte DDoS détectée par IDS (Suricata) envoyée à {{now}}"'
 
 # === [10] TEST ===
 # Lancer hping3 pour simuler une attaque
@@ -116,4 +99,5 @@ steps:
 # index="ddos_logs" sourcetype="suricata:json"
 # Vérifier les alertes générées :
 # index="ddos_logs" sourcetype="soar_alert"
+![image](https://github.com/user-attachments/assets/1536c509-dac0-4045-93dc-4bf19638bde9)
 
