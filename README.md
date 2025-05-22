@@ -1,5 +1,5 @@
 
-# Détection d'une attaque DDoS avec IDS, SIEM et SOAR
+# DDoS attack detection with IDS, SIEM and SOAR
 
 This project aims to establish a robust cybersecurity infrastructure capable of effectively detecting and responding to Distributed Denial of Service (DDoS) attacks. By integrating an Intrusion Detection System (IDS) for real-time malicious activity identification, a Security Information and Event Management (SIEM) system for centralized security log analysis, and a Security Orchestration, Automation, and Response (SOAR) platform to automate incident response, we will build a multi-layered defense system. This combined approach will not only enable early detection of DDoS threats but also facilitate automated and coordinated reactions, thereby minimizing impact on service availability.
 
