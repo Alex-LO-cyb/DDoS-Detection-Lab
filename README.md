@@ -170,10 +170,6 @@ To check that everything is properly configured, we're going to simulate a DOS a
 # TEST
 - Run hping3 to simulate an attack
 - Wait for Suricata to log suspicious activity
-- Check in Splunk (Search):
-- index="ddos_logs" sourcetype="suricata:json"
-- Check alerts generated:
-- index="ddos_logs" sourcetype="soar_alert"
   
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1536c509-dac0-4045-93dc-4bf19638bde9" alt="Received alerts on Shuffle from Splunk" />
